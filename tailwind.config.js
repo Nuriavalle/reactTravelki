@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       backgroundImage:{
         bgRegistroHotel: "url('../src/images/foto7.jpeg')",
+        
       }
      },
   },
