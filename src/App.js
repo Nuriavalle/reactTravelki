@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/header';
+import AppRouter from './router/appRouter';
 
 function App() {
   return (
     <div>
-      <Header></Header>
+      <AppRouter></AppRouter>
+
       
 
     </div>
