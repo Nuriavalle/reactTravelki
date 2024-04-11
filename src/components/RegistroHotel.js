@@ -3,7 +3,6 @@ function RegistroHotel (){
         
         <div>
 
-{/* <div class="bg-cover bg-center h-100 bg-blend-exclusion py-20 "></div>  */}
         <div class="flex justify-center py-8 items-center h-100 bg-bgRegistroHotel bg-cover bg-center">
     <div class="bg-gray-100  shadow-lg shadow-black-500/50 mx-auto shadow-gray-950 h-auto w-1/2 rounded-3xl shadow-2xl drop-shadow-2xl">
       <h1 class="text-2xl text-gray-500 font-medium text-center pt-4 italic pb-6">Registra tu <span class="text-sky-800 font-bold not-italic">h</span><span class="text-sky-800 font-bold not-italic">o</span><span class="text-green-700 font-bold not-italic">t</span><span class="text-yellow-400 font-bold not-italic">e</span><span class="text-red-700 font-bold not-italic">l</span> aquí</h1>
