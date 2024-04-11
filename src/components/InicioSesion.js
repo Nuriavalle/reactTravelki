@@ -6,7 +6,7 @@ function InicioSesion (){
         <div>
 
             <div class="py-16">
-    <div class="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
+    <div class="flex bg-white rounded-lg justify-center overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
         <div class=" lg:block lg:w-1/2 bg-cover bg-bgInicioSesion">
             <img src={logoSesion} class="h-28 pl-6"/>
             <h2 class="text-3xl font-semibold font-sans italic mt-2 mb-6 text-gray-700 text-center">Iniciar sesion</h2>
