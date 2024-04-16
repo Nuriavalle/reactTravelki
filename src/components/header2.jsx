@@ -1,7 +1,7 @@
 function Header2 (){
     return (
         
-        <header class="fixed top-0 left-0 w-full bg-gray-50 bg-opacity-45 bg-clip-padding blur-backdrop-filter shadow-md z-50">
+        <header class=" top-0 left-0 w-full bg-gray-50 bg-opacity-45 bg-clip-padding blur-backdrop-filter shadow-md z-50">
         
         <div class="container mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center">
                 <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">

@@ -4,7 +4,7 @@
 
 function Footer (){
     return (
-      <footer class="text-gray-600 body-font bg-[#0D3B66] mt-[250px]">
+      <footer class="text-gray-600 body-font bg-[#0D3B66]">
     
     <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
     
