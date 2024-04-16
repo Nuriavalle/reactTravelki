@@ -5,7 +5,10 @@ import Header from '../components/header';
 import RegistroHotel from '../components/RegistroHotel';
 import RegistroUsuario from '../components/RegistroUsuario';
 import InicioSesion from '../components/InicioSesion';
-import Carrusel from '../components/carrusel'
+import Carrusel from '../components/carrusel';
+import Footer from '../components/footer';
+import Header2 from '../components/header2';
+import VistaHoliday from '../page/vistaHoliday';
 
 function AppRouter(){
     return(
@@ -17,8 +20,9 @@ function AppRouter(){
             <Route path="/RegistroUsuario" element={<RegistroUsuario/>}/>
             <Route path="/InicioSesion" element={<InicioSesion/>}/>
             <Route path="/Carrusel" element={<Carrusel/>}/>
-        </Routes>
-        </BrowserRouter>
+            <Route path="/Footer" element= {<Footer/>}/>
+            </Routes>
+            </BrowserRouter>
     )
 }
 

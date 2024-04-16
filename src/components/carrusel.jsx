@@ -1,28 +1,46 @@
   import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import imagen1 from "../images/foto2.png"
-import imagen2 from "../images/foto3.png"
-import imagen3 from "../images/foto7.jpeg"
+import imagen1 from "../images/fachada.png"
+import imagen2 from "../images/cuarto2.jpg"
+import imagen3 from "../images/living.jpg"
+import imagen4 from "../images/piscina.jpg"
+import imagen5 from "../images/comedor.jpg"
 
 
 function Carrusel (){
     return (
+
+      
         <section class="text-gray-600 body-font">
+          <div class="container ml-12 w-32 h-12 text-lg  py-1 border-4 text-center font-medium text-black focus:outline-none bg-white  border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+        FOTOS
+
+      </div>
   <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
     <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
     <Carousel>
         <div>
             <img src={imagen1} />
-            <p className="legend">Legend 1</p>
+            
         </div>
         <div>
             <img src={imagen2} />
-            <p className="legend">Legend 2</p>
+            
         </div>
         <div>
             <img src={imagen3} />
-            <p className="legend">Legend 3</p>
+            
         </div>
+        <div>
+            <img src={imagen4} />
+            
+        </div>
+        <div>
+            <img src={imagen5} />
+            
+        </div>
+
+
     </Carousel>
     
     </div>
