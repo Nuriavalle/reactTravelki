@@ -1,4 +1,4 @@
-import logoBlanco from "./"
+import logoBlanco from "../images/foto3.png"
 
 
 function Header2 (){
@@ -6,7 +6,7 @@ function Header2 (){
         
       <header class="bg-sky-800 text-white flex items-end">
         
-      <img src="foto3.png" alt="Imagen de ejemplo" width="250"/>
+      <img src={logoBlanco} alt="Imagen de ejemplo" width="250"/>
 
       <div class="container mx-auto text-end mb-8 pb-3">
   <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">

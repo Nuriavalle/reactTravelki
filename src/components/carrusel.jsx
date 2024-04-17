@@ -16,11 +16,11 @@ function Carrusel (){
         FOTOS
 
       </div>
-  <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
-    <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
+  <div class="container px-5 mx-auto flex flex-wrap items-center">
+    <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0 ">
     <Carousel>
         <div>
-            <img src={imagen1} />
+            <img src={imagen1} className=""/>
             
         </div>
         <div>

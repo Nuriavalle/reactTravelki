@@ -1,4 +1,4 @@
-
+import logoBlanco from "../images/foto3.png"
 
 
 
@@ -9,7 +9,7 @@ function Footer (){
     <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
     
     <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left xl">
-     <img src="Images/Logo vertical negativo.png" alt="logo"/>
+     <img src={logoBlanco} alt="logo"/>
     </div>
     <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
