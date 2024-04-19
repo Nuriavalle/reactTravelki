@@ -1,8 +1,8 @@
-  import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import imagen1 from "../images/fachada.png"
 import imagen2 from "../images/cuarto2.jpg"
-import imagen3 from "../images/fotoh.jpg"
+import imagen3 from "../images/living.jpg"
 import imagen4 from "../images/piscina.jpg"
 import imagen5 from "../images/comedor.jpg"
 
