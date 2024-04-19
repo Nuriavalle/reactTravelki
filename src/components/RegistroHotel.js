@@ -1,3 +1,7 @@
+import InputMask from 'react-input-mask';
+
+
+
 function RegistroHotel (){
     return (
         
@@ -16,13 +20,17 @@ function RegistroHotel (){
                     <label class="normal-case font-medium text-gray-500 text-base font-sans  mb-2" for="grid-first-name">
                         Email
                     </label>
-                    <input id="correo_electronico" class="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    type="text"/>
-                    <label class="normal-case font-medium text-gray-500 text-base font-sans  mb-2" for="grid-first-name">
-                        Contacto
-                    </label>
-                    <input id="contacto" class="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    type="tel" name="contacto" required placeholder="+503"/>
+                    <input id="correoElectronico" class="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="text"/>
+
+                    <label className="normal-case font-medium text-gray-500 text-base font-sans mb-2" htmlFor="contacto">
+                            Contacto
+                        </label>
+                        <InputMask
+                            id="contacto"
+                            mask="9999-9999"
+                            className="flex w-full pr-30 rounded-md border mb-1 border-amber-700 px-4 py-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            type="text"
+                            name="contacto"/>
                     <label class="normal-case font-medium text-gray-500 text-base font-sans  mb-2" for="grid-first-name">
                         Contraseña
                     </label>
