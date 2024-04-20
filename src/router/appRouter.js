@@ -11,21 +11,19 @@ import Footer from '../components/footer';
 import Header2 from '../components/header2';
 import VistaHoliday from '../page/vistaHoliday';
 
-function AppRouter(){
-    return(
+function AppRouter() {
+    return (
         <BrowserRouter>
-        <Header2></Header2>
-
-        <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/RegistroHotel" element={<RegistroHotel/>}/>
-            <Route path="/RegistroUsuario" element={<RegistroUsuario/>}/>
-            <Route path="/InicioSesion" element={<InicioSesion/>}/>
-            <Route path="/VistaHoliday" element={<VistaHoliday/>}/>
+            <Header2></Header2>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/RegistroHotel" element={<RegistroHotel />} />
+                <Route path="/RegistroUsuario" element={<RegistroUsuario />} />
+                <Route path="/InicioSesion" element={<InicioSesion />} />
+                <Route path="/VistaHoliday" element={<VistaHoliday />} />
             </Routes>
-            
             <Footer></Footer>
-            </BrowserRouter>
+        </BrowserRouter>
     )
 }
 
