@@ -17,7 +17,7 @@ function RegistroHotel() {
     const handleDepartamentoChange = (event) => {
         const departamentoCode = event.target.value;
         setSelectedDepartamento(departamentoCode);
-    
+
         fetch(`https://api.npoint.io/253f0ee259ef1620a547/departamentos/${departamentoCode}`)
             .then(response => response.json())
             .then(data => {
@@ -32,7 +32,7 @@ function RegistroHotel() {
                 <div className="bg-gray-100 shadow-lg shadow-black-500/50 mx-auto shadow-gray-950 h-auto w-1/2 rounded-3xl shadow-2xl drop-shadow-2xl">
                     <h1 className="text-2xl text-gray-500 font-medium text-center pt-4 italic pb-6">Registra tu <span className="text-sky-800 font-bold not-italic">h</span><span className="text-sky-800 font-bold not-italic">o</span><span className="text-green-700 font-bold not-italic">t</span><span className="text-yellow-400 font-bold not-italic">e</span><span className="text-red-700 font-bold not-italic">l</span> aquí</h1>
                     <form id="formulario" className="w-full max-w-lg container mx-auto px-4">
-                   
+
                         <label htmlFor="nombre_hotel" className="normal-case font-medium text-gray-500 text-base font-sans  mb-2">Nombre del hotel</label>
                         <input id="nombre_hotel" className="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="text" name="nombre_hotel" required />
 
