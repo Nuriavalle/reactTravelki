@@ -16,7 +16,7 @@ function Tabs() {
 
 
   return (
-    <section className=" lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0 text-gray-600 body-font ">
+    <section className=" lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0 pl-14 text-gray-600 body-font ">
       {/* <div className="container px-5 py-24 mx-auto flex flex-wrap flex-col"> */}
         <div className="flex mx-auto flex-wrap">
           <a onClick={() => cambiarContenido(1)}
