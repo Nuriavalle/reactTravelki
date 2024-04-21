@@ -1,97 +1,105 @@
+import React, { useState, useEffect } from 'react';
 import InputMask from 'react-input-mask';
 
+function RegistroHotel() {
+    const [departamentos, setDepartamentos] = useState([]);
+    const [municipios, setMunicipios] = useState([]);
+    const [selectedDepartamento, setSelectedDepartamento] = useState('');
+    const [selectedMunicipio, setSelectedMunicipio] = useState('');
 
+    useEffect(() => {
+        fetch('https://api.npoint.io/19485e724f0fe2228641')
+            .then(response => response.json())
+            .then(data => setDepartamentos(data.departamentos))
+            .catch(error => console.error('Error fetching departamentos:', error));
+    }, []);
 
-function RegistroHotel (){
+    const handleDepartamentoChange = (event) => {
+        const departamentoCode = event.target.value;
+        setSelectedDepartamento(departamentoCode);
+    
+        fetch(`https://api.npoint.io/253f0ee259ef1620a547/departamentos/${departamentoCode}`)
+            .then(response => response.json())
+            .then(data => {
+                const municipiosDelDepartamento = data.municipios;
+                setMunicipios(municipiosDelDepartamento);
+            })
+            .catch(error => console.error('Error fetching municipios:', error));
+    };
     return (
-        
         <div>
+            <div className="flex justify-center py-8 items-center h-100 bg-bgRegistroHotel bg-cover bg-center">
+                <div className="bg-gray-100 shadow-lg shadow-black-500/50 mx-auto shadow-gray-950 h-auto w-1/2 rounded-3xl shadow-2xl drop-shadow-2xl">
+                    <h1 className="text-2xl text-gray-500 font-medium text-center pt-4 italic pb-6">Registra tu <span className="text-sky-800 font-bold not-italic">h</span><span className="text-sky-800 font-bold not-italic">o</span><span className="text-green-700 font-bold not-italic">t</span><span className="text-yellow-400 font-bold not-italic">e</span><span className="text-red-700 font-bold not-italic">l</span> aquí</h1>
+                    <form id="formulario" className="w-full max-w-lg container mx-auto px-4">
+                   
+                        <label htmlFor="nombre_hotel" className="normal-case font-medium text-gray-500 text-base font-sans  mb-2">Nombre del hotel</label>
+                        <input id="nombre_hotel" className="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="text" name="nombre_hotel" required />
 
-        <div class="flex justify-center py-8 items-center h-100 bg-bgRegistroHotel bg-cover bg-center">
-    <div class="bg-gray-100  shadow-lg shadow-black-500/50 mx-auto shadow-gray-950 h-auto w-1/2 rounded-3xl shadow-2xl drop-shadow-2xl">
-      <h1 class="text-2xl text-gray-500 font-medium text-center pt-4 italic pb-6">Registra tu <span class="text-sky-800 font-bold not-italic">h</span><span class="text-sky-800 font-bold not-italic">o</span><span class="text-green-700 font-bold not-italic">t</span><span class="text-yellow-400 font-bold not-italic">e</span><span class="text-red-700 font-bold not-italic">l</span> aquí</h1>
-      <form id="formulario" class="w-full max-w-lg container mx-auto px-4">
-       
-                <label class="normal-case font-medium text-gray-500 text-base font-sans  mb-2" for="grid-first-name">
-                    Nombre del hotel
-                </label>
-                <input id="nombre_hotel" class="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    type="text" name="nombre_hotel" required></input>
-                    <label class="normal-case font-medium text-gray-500 text-base font-sans  mb-2" for="grid-first-name">
-                        Email
-                    </label>
-                    <input id="correoElectronico" class="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="text"/>
+                        <label htmlFor="correoElectronico" className="normal-case font-medium text-gray-500 text-base font-sans  mb-2">Email</label>
+                        <input id="correoElectronico" className="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="text" />
 
-                    <label className="normal-case font-medium text-gray-500 text-base font-sans mb-2" htmlFor="contacto">
-                            Contacto
-                        </label>
+                        <label htmlFor="contacto" className="normal-case font-medium text-gray-500 text-base font-sans mb-2">Contacto</label>
                         <InputMask
                             id="contacto"
                             mask="9999-9999"
                             className="flex w-full pr-30 rounded-md border mb-1 border-amber-700 px-4 py-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             type="text"
-                            name="contacto"/>
-                    <label class="normal-case font-medium text-gray-500 text-base font-sans  mb-2" for="grid-first-name">
-                        Contraseña
-                    </label>
-                    <input id="contraseña" class="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="password" placeholder="******************"/>
-                    <label class="normal-case font-medium text-gray-500 text-base font-sans  mb-2" for="grid-first-name">
-                        Confirme su contraseña
-                    </label>
-                    <input id="confirmar_contraseña" class="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="password" placeholder="******************"/>
-                    <label class="normal-case font-medium text-gray-500 text-base font-sans  mb-2" for="grid-first-name">
-                        Direccion
-                    </label>
-                    <input id="direccion" class="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    type="text"/>
-                    <label class="normal-case font-medium text-gray-500 text-base font-sans  mb-2" for="grid-first-name">
-                        Departamento
-                    </label>
-                    <select id="departamento" class="flex w-full pr-30 rounded-md border mb-4 border-amber-700 mb-2 py-1 px-4 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    type="text" name="departamento" required>
-                    <option value="">Selecciona un departamento</option>
-                    <option value="1">Ahuachapán</option>
-                    <option value="2">Cabañas</option>
-                    <option value="3">Chalatenango</option>
-                    <option value="4">Cuscatlán</option>
-                    <option value="5">La Libertad</option>
-                    <option value="6">Morazán</option>
-                    <option value="7">La Paz</option>
-                    <option value="8">Santa Ana</option>
-                    <option value="9">San Miguel</option>
-                    <option value="10">San Salvador</option>
-                    <option value="11">San Vicente	</option>
-                    <option value="12">Sonsonate</option>
-                    <option value="13">La Unión</option>
-                    <option value="14">Usulután</option>
-                </select>
-                <label class="normal-case font-medium text-gray-500 text-base font-sans  mb-2" for="grid-first-name">
-                    Municipio
-                </label>
-                <select id="municipio" class="flex w-full pr-30 rounded-md border mb-4 border-amber-700 mb-2 py-1 px-4 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                type="text" name="municipio" required>
-                <option value="">Selecciona un municipio</option>
-                <option value="1">Mejicanos</option>
-                <option value="2">Soyapango</option>
-                <option value="3">San Salvador</option>
-              
-                
-            </select>
-                <div class="text-center">
-                    <input id="link-checkbox" type="checkbox" value="" name="link-checkbox" required class="w-4 h-4 text-blue-600 bg-gray-500 border border-amber-700 rounded focus:ring-blue-500 dark:bg-gray-700"/>
-                    <label for="link-checkbox" class="text-sm font-medium text-gray-500 ">He leido y acepto los <span class="text-sky-800 dark:text-sky-800 hover:underline">terminos y condiciones </span>del sitio.</label>
+                            name="contacto" />
+
+                        <label htmlFor="contraseña" className="normal-case font-medium text-gray-500 text-base font-sans  mb-2">Contraseña</label>
+                        <input id="contraseña" className="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="password" placeholder="******************" />
+
+                        <label htmlFor="confirmar_contraseña" className="normal-case font-medium text-gray-500 text-base font-sans  mb-2">Confirme su contraseña</label>
+                        <input id="confirmar_contraseña" className="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="password" placeholder="******************" />
+
+                        <label htmlFor="direccion" className="normal-case font-medium text-gray-500 text-base font-sans  mb-2">Dirección</label>
+                        <input id="direccion" className="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="text" />
+
+                        <label htmlFor="departamento">Departamento</label>
+                        <select
+                            id="departamento"
+                            value={selectedDepartamento}
+                            onChange={handleDepartamentoChange}
+                            className="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        >
+                            <option value="">Selecciona un departamento</option>
+                            {departamentos.map(departamento => (
+                                <option key={departamento.codigo} value={departamento.codigo}>
+                                    {departamento.nombre}
+                                </option>
+                            ))}
+                        </select>
+
+                        <label htmlFor="municipio">Municipio</label>
+                        <select
+                            id="municipio"
+                            value={selectedMunicipio}
+                            onChange={event => setSelectedMunicipio(event.target.value)}
+                            className="flex w-full pr-30 rounded-md border mb-4 border-amber-700 mb-2 py-1 px-4 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        >
+                            <option value="">Selecciona un municipio</option>
+                            {municipios.map(municipio => (
+                                <option key={municipio.id_mun} value={municipio.id_mun}>
+                                    {municipio.nombre}
+                                </option>
+                            ))}
+                        </select>
+
+                        <div className="text-center">
+                            <input id="link-checkbox" type="checkbox" value="" name="link-checkbox" required className="w-4 h-4 text-blue-600 bg-gray-500 border border-amber-700 rounded focus:ring-blue-500 dark:bg-gray-700" />
+                            <label htmlFor="link-checkbox" className="text-sm font-medium text-gray-500">He leído y acepto los <span className="text-sky-800 dark:text-sky-800 hover:underline">términos y condiciones </span>del sitio.</label>
+                        </div>
+
+                        <div className="text-center">
+                            <button className="bg-sky-800 hover:bg-blue-700 text-white font-medium-2 pr-10 pl-10 py-2 px-4 mb-8 mt-2 rounded-full">
+                                Enviar
+                            </button>
+                        </div>
+                    </form>
                 </div>
-        
-            <div class="text-center">
-         <button class="bg-sky-800 hover:bg-blue-700 text-white font-medium-2 pr-10 pl-10 py-2 px-4 mb-8 mt-2 rounded-full">
-         Enviar
-        </button> 
+            </div>
         </div>
-        </form>
-           
-    </div>
-    </div>
-       </div>
     );
 };
 
