@@ -18,7 +18,7 @@ function RegistroHotel() {
         const departamentoCode = event.target.value;
         setSelectedDepartamento(departamentoCode);
 
-        fetch(`https://api.npoint.io/253f0ee259ef1620a547/departamentos/${departamentoCode}`)
+        fetch(`https://api.npoint.io/253f0ee259ef1620a547/departamentos/${departamentoCode - 1}`)
             .then(response => response.json())
             .then(data => {
                 const municipiosDelDepartamento = data.municipios;
