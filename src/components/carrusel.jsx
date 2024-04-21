@@ -11,7 +11,7 @@ function Carrusel() {
     const fetchImages = async () => {
       try {
         const response = await fetch(
-          'https://api.unsplash.com/photos/random?count=5&client_id=Nppj_gPu-CNwOuCBbQWUd3rfNwLzKanXVABzF9wxuMg'
+          'https://api.unsplash.com/photos/random?count=10&client_id=Nppj_gPu-CNwOuCBbQWUd3rfNwLzKanXVABzF9wxuMg'
         );
         if (response.ok) {
           const data = await response.json();
