@@ -1,77 +1,89 @@
+function Servicios() {
+    return (
 
-
-
-
-
-function Servicios (){
-<section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-col text-center w-full mb-20">
-      <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Pricing</h1>
-      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Banh mi cornhole echo park skateboard authentic crucifix neutra tilde lyft biodiesel artisan direct trade mumblecore 3 wolf moon twee</p>
-    </div>
-    <div class="lg:w-2/3 w-full mx-auto overflow-auto">
-      <table class="table-auto w-full text-left whitespace-no-wrap">
-        <thead>
-          <tr>
-            <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">Plan</th>
-            <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Speed</th>
-            <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Storage</th>
-            <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Price</th>
-            <th class="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="px-4 py-3">Start</td>
-            <td class="px-4 py-3">5 Mb/s</td>
-            <td class="px-4 py-3">15 GB</td>
-            <td class="px-4 py-3 text-lg text-gray-900">Free</td>
-            <td class="w-10 text-center">
-              <input name="plan" type="radio">
-            </td>
-          </tr>
-          <tr>
-            <td class="border-t-2 border-gray-200 px-4 py-3">Pro</td>
-            <td class="border-t-2 border-gray-200 px-4 py-3">25 Mb/s</td>
-            <td class="border-t-2 border-gray-200 px-4 py-3">25 GB</td>
-            <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">$24</td>
-            <td class="border-t-2 border-gray-200 w-10 text-center">
-              <input name="plan" type="radio">
-            </td>
-          </tr>
-          <tr>
-            <td class="border-t-2 border-gray-200 px-4 py-3">Business</td>
-            <td class="border-t-2 border-gray-200 px-4 py-3">36 Mb/s</td>
-            <td class="border-t-2 border-gray-200 px-4 py-3">40 GB</td>
-            <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">$50</td>
-            <td class="border-t-2 border-gray-200 w-10 text-center">
-              <input name="plan" type="radio">
-            </td>
-          </tr>
-          <tr>
-            <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">Exclusive</td>
-            <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">48 Mb/s</td>
-            <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">120 GB</td>
-            <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900">$72</td>
-            <td class="border-t-2 border-b-2 border-gray-200 w-10 text-center">
-              <input name="plan" type="radio">
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
-      <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-          <path d="M5 12h14M12 5l7 7-7 7"></path>
-        </svg>
-      </a>
-      <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
-    </div>
-  </div>
-</section>
+        <section class="text-gray-600 body-font">
+            <div class="container px-5 py-4 mx-auto">
+                <div class="text-left mb-6">
+                    <h1 class="sm:text-3xl text-2xl font-medium text-left title-font text-gray-900 mb-4">SERVICIOS  DEL HOTEL HOLIDAY INN</h1>
+                    <p class="text-base leading-relaxed mx-auto">El Holiday Inn San Salvador ofrece recepción 24 horas, un gimnasio y una piscina al aire libre, así como conexión Wi-Fi gratuita y aparcamiento gratuito. Las habitaciones cuentan con aire acondicionado, el hotel tiene un restaurante y cafetería, el Essenza Café, que presenta un ambiente moderno.</p>
+                </div>
+                <div class="flex flex-wrap -m-4">
+                    <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
+                        <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2.5">
+                            <a>
+                                <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                                        <path d="M20 6L9 17l-5-5"></path>
+                                    </svg>
+                                </span>Bar
+                            </a>
+                            <a>
+                                <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                                        <path d="M20 6L9 17l-5-5"></path>
+                                    </svg>
+                                </span>Aire Acondicionado
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
+                        <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2.5">
+                            <a>
+                                <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                                        <path d="M20 6L9 17l-5-5"></path>
+                                    </svg>
+                                </span>Piscina
+                            </a>
+                            <a>
+                                <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                                        <path d="M20 6L9 17l-5-5"></path>
+                                    </svg>
+                                </span>Spa
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
+                        <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2.5">
+                            <a>
+                                <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                                        <path d="M20 6L9 17l-5-5"></path>
+                                    </svg>
+                                </span>Parqueo
+                            </a>
+                            <a>
+                                <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                                        <path d="M20 6L9 17l-5-5"></path>
+                                    </svg>
+                                </span>Cafeteria
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
+                        <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2.5">
+                            <a>
+                                <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                                        <path d="M20 6L9 17l-5-5"></path>
+                                    </svg>
+                                </span>Gimnasio
+                            </a>
+                            <a>
+                                <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                                        <path d="M20 6L9 17l-5-5"></path>
+                                    </svg>
+                                </span>Wifi
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 };
-);
 
-export default Servicios
+export default Servicios;

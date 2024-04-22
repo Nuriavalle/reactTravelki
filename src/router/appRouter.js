@@ -1,25 +1,21 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from "../page/Home"
-import Header from '../components/header';
-import RegistroHotel from '../components/RegistroHotel';
-import RegistroUsuario from '../components/RegistroUsuario';
-import InicioSesion from '../components/InicioSesion';
-import Cuadros from '../components/cuadros';
-import Carrusel from '../components/carrusel';
+import RegistrodeUsuario from '../page/RegistrodeUsuario';
+import IniciodeSesion from '../page/IniciodeSesion';
 import Footer from '../components/footer';
-import Header2 from '../components/header2';
 import VistaHoliday from '../page/vistaHoliday';
+import Landing from '../page/Landing1';
+import RegistrodeHotel from '../page/RegistrodeHotel';
+
 
 function AppRouter() {
     return (
         <BrowserRouter>
-            <Header2></Header2>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/RegistroHotel" element={<RegistroHotel />} />
-                <Route path="/RegistroUsuario" element={<RegistroUsuario />} />
-                <Route path="/InicioSesion" element={<InicioSesion />} />
+                <Route path="/" element={<Landing />} />
+                <Route path="/RegistrodeHotel" element={<RegistrodeHotel/>}/>
+                <Route path="/RegistrodeUsuario" element={<RegistrodeUsuario />} />
+                <Route path="/IniciodeSesion" element={<IniciodeSesion />} />
                 <Route path="/VistaHoliday" element={<VistaHoliday />} />
             </Routes>
             <Footer></Footer>
