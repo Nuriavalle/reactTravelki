@@ -6,7 +6,7 @@ import Footer from '../components/footer';
 import VistaHoliday from '../page/vistaHoliday';
 import Landing from '../page/Landing1';
 import RegistrodeHotel from '../page/RegistrodeHotel';
-
+import HabitacionHotel from '../page/HabitacionHotel';
 
 function AppRouter() {
     return (
@@ -17,6 +17,8 @@ function AppRouter() {
                 <Route path="/RegistrodeUsuario" element={<RegistrodeUsuario />} />
                 <Route path="/IniciodeSesion" element={<IniciodeSesion />} />
                 <Route path="/VistaHoliday" element={<VistaHoliday />} />
+                <Route path="/HabitacionHotel" element={<HabitacionHotel />} />
+
             </Routes>
             <Footer></Footer>
         </BrowserRouter>
