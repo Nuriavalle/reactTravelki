@@ -35,7 +35,7 @@ function Carrusel() {
         FOTOS
       </div>
       <div className="container px-5 mx-auto flex flex-wrap items-center">
-        <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
+        <div className="lg:w-8/12 h-4/5 md:pr-16 lg:pr-0 pr-0">
           <Carousel selectedItem={currentIndex}>
             {images.map((image, index) => (
               <div key={index} style={{ width: '100%', height: '400px' }}>

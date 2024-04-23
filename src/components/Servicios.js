@@ -2,7 +2,7 @@ function Servicios() {
     return (
 
         <section class=" p-4 lg:w-3/5 md:w-1/2 md:w-full text-gray-600 body-font">
-          <div class="container px-5 py-4 mx-auto flex flex-wrap">
+          <div class="container px-5 py-4 ml-6 mx-auto flex flex-wrap">
     <div class="flex flex-wrap -m-4">
      
                     <h1 class="sm:text-3xl text-2xl font-medium text-left title-font text-gray-900 mb-4">SERVICIOS  DEL HOTEL HOLIDAY INN</h1>
