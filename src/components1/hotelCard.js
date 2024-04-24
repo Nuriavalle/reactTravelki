@@ -12,7 +12,6 @@ function HotelCard() {
           <div class="lg:w-1/3 sm:w-1/2 w-full mx-8">
             <img src={Hotel1} class="rounded-xl w-full h-[160px]"></img>
           </div>
-
           <div class="lg:w-1/3 sm:w-1/2 w-full mr-8">
             <h1 class="font-bold text-xl mb-2">Hotel "Las Tunas"</h1>
             <p class="text-gray-700 text-base">
@@ -21,11 +20,10 @@ function HotelCard() {
             </p>
             <div class="lg:w-1/3 sm:w-1/2 w-full mr-4 flex items-center">
               <p class="mr-2 text-[#0D3B66]">Calificación:</p>
-              <RatingExcelente /> 
+              <RatingExcelente />
               <p class="ml-2 text-[#0D3B66] font-bold">Excelente.</p>
             </div>
           </div>
-
           <div class="lg:w-1/3 sm:w-1/2 w-full border-l-4 border-gray-600 border-opacity-50 pl-4 ml-4">
             <div class="flex items-center mb-4">
               <img src={Cama} class="w-8 h-8 mr-2"></img>
@@ -46,5 +44,4 @@ function HotelCard() {
     </div>
   );
 }
-
 export default HotelCard;

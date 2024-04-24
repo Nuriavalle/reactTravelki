@@ -30,7 +30,7 @@ function RegistroUsuario() {
                             mask="99999999-9"
                             className="flex w-full pr-30 rounded-md border mb-1 border-amber-700 px-4 py-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             type="text"
-                            name="dui"/>
+                            name="dui" />
                         <label class="normal-case font-medium text-gray-500 text-base font-sans  mb-2" for="grid-first-name">
                             Fecha de nacimiento
                         </label>
@@ -63,5 +63,4 @@ function RegistroUsuario() {
         </div>
     );
 };
-
 export default RegistroUsuario;

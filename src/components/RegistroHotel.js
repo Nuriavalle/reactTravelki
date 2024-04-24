@@ -32,13 +32,10 @@ function RegistroHotel() {
                 <div className="bg-gray-100 shadow-lg shadow-black-500/50 mx-auto shadow-gray-950 h-auto w-1/2 rounded-3xl shadow-2xl drop-shadow-2xl">
                     <h1 className="text-2xl text-gray-500 font-medium text-center pt-4 italic pb-6">Registra tu <span className="text-sky-800 font-bold not-italic">h</span><span className="text-sky-800 font-bold not-italic">o</span><span className="text-green-700 font-bold not-italic">t</span><span className="text-yellow-400 font-bold not-italic">e</span><span className="text-red-700 font-bold not-italic">l</span> aquí</h1>
                     <form id="formulario" className="w-full max-w-lg container mx-auto px-4">
-
                         <label htmlFor="nombre_hotel" className="normal-case font-medium text-gray-500 text-base font-sans  mb-2">Nombre del hotel</label>
                         <input id="nombre_hotel" className="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="text" name="nombre_hotel" required />
-
                         <label htmlFor="correoElectronico" className="normal-case font-medium text-gray-500 text-base font-sans  mb-2">Email</label>
                         <input id="correoElectronico" className="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="text" />
-
                         <label htmlFor="contacto" className="normal-case font-medium text-gray-500 text-base font-sans mb-2">Contacto</label>
                         <InputMask
                             id="contacto"
@@ -46,16 +43,12 @@ function RegistroHotel() {
                             className="flex w-full pr-30 rounded-md border mb-1 border-amber-700 px-4 py-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             type="text"
                             name="contacto" />
-
                         <label htmlFor="contraseña" className="normal-case font-medium text-gray-500 text-base font-sans  mb-2">Contraseña</label>
                         <input id="contraseña" className="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="password" placeholder="******************" />
-
                         <label htmlFor="confirmar_contraseña" className="normal-case font-medium text-gray-500 text-base font-sans  mb-2">Confirme su contraseña</label>
                         <input id="confirmar_contraseña" className="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="password" placeholder="******************" />
-
                         <label htmlFor="direccion" className="normal-case font-medium text-gray-500 text-base font-sans  mb-2">Dirección</label>
                         <input id="direccion" className="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="text" />
-
                         <label htmlFor="departamento">Departamento</label>
                         <select
                             id="departamento"
@@ -70,7 +63,6 @@ function RegistroHotel() {
                                 </option>
                             ))}
                         </select>
-
                         <label htmlFor="municipio">Municipio</label>
                         <select
                             id="municipio"
@@ -85,12 +77,10 @@ function RegistroHotel() {
                                 </option>
                             ))}
                         </select>
-
                         <div className="text-center">
                             <input id="link-checkbox" type="checkbox" value="" name="link-checkbox" required className="w-4 h-4 text-blue-600 bg-gray-500 border border-amber-700 rounded focus:ring-blue-500 dark:bg-gray-700" />
                             <label htmlFor="link-checkbox" className="text-sm font-medium text-gray-500">He leído y acepto los <span className="text-sky-800 dark:text-sky-800 hover:underline">términos y condiciones </span>del sitio.</label>
                         </div>
-
                         <div className="text-center">
                             <button className="bg-sky-800 hover:bg-blue-700 text-white font-medium-2 pr-10 pl-10 py-2 px-4 mb-8 mt-2 rounded-full">
                                 Enviar
@@ -102,5 +92,4 @@ function RegistroHotel() {
         </div>
     );
 };
-
 export default RegistroHotel;

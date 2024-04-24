@@ -1,7 +1,5 @@
 import logoBlanco from "../images/foto3.png"
 
-
-
 function Footer() {
   return (
     <footer class="text-gray-600 body-font bg-[#0D3B66]">
@@ -59,5 +57,4 @@ function Footer() {
     </footer>
   )
 }
-
 export default Footer;

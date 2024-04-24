@@ -12,11 +12,8 @@ function VistaHoliday() {
 <infoHotel></infoHotel>
 <Cuadros></Cuadros>
 <Carrusel></Carrusel>
-<Tabs></Tabs>
-            
+<Tabs></Tabs> 
         </div>
-
     )
 }
-
 export default VistaHoliday;
