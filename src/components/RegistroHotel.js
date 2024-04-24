@@ -26,6 +26,11 @@ function RegistroHotel() {
             })
             .catch(error => console.error('Error fetching municipios:', error));
     };
+
+    
+
+
+
     return (
         <div>
             <div className="flex justify-center py-8 items-center h-100 bg-bgRegistroHotel bg-cover bg-center">
