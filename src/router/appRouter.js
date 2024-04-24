@@ -21,6 +21,6 @@ function AppRouter() {
             </Routes>
             <Footer></Footer>
         </BrowserRouter>
-    )
-}
+    );
+};
 export default AppRouter;
