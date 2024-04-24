@@ -1,63 +1,26 @@
 function Descripcion() {
-    return (
-        <div>
-          <div>
-          <div class="flex">
-  <table class=" w-1/2 text-sm border border-slate-400 text-left...">
-  <tbody>
-    <tr>
-      <td class="border border-white text-left ...">TIPO:</td>
-      <td class="border border-white text-left ..."> HOTEL</td>
-
-    </tr>
-    <tr>
-      <td class="border border-white text-left ...">CALIFICACION:</td>
-      <td class="border border-white text-left ..."> 5 ESTRELLAS</td>
-    </tr>
-    <tr>
-      <td class="border border-white text-left ...">PAIS:       </td>
-      <td class="border border-white text-left ..."> EL SALVADOR</td>
-    </tr>
-    <tr>
-      <td class="border border-white text-left ...">MUNICIPIO:</td>
-      <td class="border border-white text-left ..."> SAN SALVADOR   </td>
-    </tr>
-    <tr>
-      <td class="border border-white text-left ...">DIRECCION:</td>
-      <td class="border border-white text-left ...">Urb. y, Blvr. Sta. Elena</td>
-    </tr>
-    <tr>
-      <td class="border border-white text-left ...">NUMERO DE TELEFONO:</td>
-      <td class="border border-white text-left ...">503-5006000</td>
-    </tr>
-    <tr>
-      <td class="border border-white text-left ...">ESTADIA MINIMA:</td>
-      <td class="border border-white text-left ...">UN DIA UNA NOCHE</td>
-    </tr>
-  </tbody>
-</table>
-        
-        <div class="pt-2 pl-2 w-1/2 w-full">
-        <div class="h-full bg-gray-100 p-6 rounded">
-          <img alt="testimonial" src="https://dummyimage.com/107x107" class="w-16 h-16 rounded-full  "/>
-            <span class="flex-grow flex flex-col pl-16">
-              <span class="title-font font-medium text-gray-900 pb-6">DESCRIPCION DEL HOTEL</span>
-              
-            </span>
-          <p class="justify-text mb-6">Ya sea que visite por negocios o placer, el hotel Holiday Inn® San Salvador es su opción ideal, con amenidades de alta calidad, excelente servicio y una incomparable ubicación en la ciudad.</p>
-          <a class="inline-flex items-center">
-            
-          </a>
+  return (
+    <div>
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-4 mx-auto flex flex-wrap">
+          <div class="flex flex-wrap -m-4">
+            <div class="p-4 lg:w-3/5 md:w-1/2 md:w-full">
+              <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
+                <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-8 h-8" viewBox="0 0 24 24">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow">
+                  <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Shooting Stars</h2>
+                  <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      </div>
-      </div>
-      </div>
-
-
-
-
-    );
+      </section>
+    </div>
+  );
 };
-
 export default Descripcion
