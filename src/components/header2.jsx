@@ -1,4 +1,5 @@
 import logoBlanco from "../images/foto3.png"
+import { Link } from 'react-router-dom';
 
 function Header2() {
   return (
@@ -7,10 +8,10 @@ function Header2() {
       <div class="container mx-auto text-end mb-8 pb-3">
         <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
         </nav>
-        <button class="inline-flex items-center py-1 px-8 underline text-base mt-4 md:mt-0 mr-1">INICIO</button>
-        <button class="inline-flex items-center border-2 border-white  py-1 px-8 focus:outline-none hover:bg-gray-200 rounded-full text-base mt-4 md:mt-0 mr-1">REGISTRA TU HOSPEDAJE</button>
-        <button class="inline-flex items-center border-2 border-white py-1 px-8 focus:outline-none hover:bg-gray-200 rounded-full text-base mt-4 md:mt-2 mr-1">REGISTRATE</button>
-        <button class="inline-flex items-center bg-[#9a3412] border-2 border-[#9a3412] py-1 px-8 focus:outline-none hover:bg-gray-200 rounded-full text-white mr-8 mt-4 md:mt-0">INICIA SESIÒN</button>
+        <Link to="/" className="inline-flex items-center border-2 border-[#0D3B66] py-1 px-8 focus:outline-none hover:bg-gray-200 rounded-full text-base mr-1">Inicio</Link>
+        <Link to="/RegistrodeHotel" className="inline-flex items-center border-2 border-[#0D3B66] py-1 px-8 focus:outline-none hover:bg-gray-200 rounded-full text-base mr-1">Registrar hotel</Link>
+        <Link to="/RegistrodeUsuario" className="inline-flex items-center border-2 border-[#0D3B66] py-1 px-8 focus:outline-none hover:bg-gray-200 rounded-full text-base mr-1">Registrate</Link>
+        <Link to="/IniciodeSesion" className="inline-flex items-center bg-[#0D3B66] border-0 py-1 px-8 focus:outline-none hover:bg-[#1D588F] rounded-full text-white">Inicia sesión</Link>
       </div>
     </header>
   );
