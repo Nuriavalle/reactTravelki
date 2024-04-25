@@ -8,7 +8,7 @@ function RegistroHotel() {
     const [selectedMunicipio, setSelectedMunicipio] = useState('');
 
     useEffect(() => {
-        fetch('https://api.npoint.io/19485e724f0fe2228641')
+        fetch('https://1z185jnw-8000.use2.devtunnels.ms/api/index-departamento')
             .then(response => response.json())
             .then(data => setDepartamentos(data.departamentos))
             .catch(error => console.error('Error fetching departamentos:', error));
@@ -18,7 +18,7 @@ function RegistroHotel() {
         const departamentoCode = event.target.value;
         setSelectedDepartamento(departamentoCode);
 
-        fetch(`https://api.npoint.io/253f0ee259ef1620a547/departamentos/${departamentoCode - 1}`)
+        fetch(`https://1z185jnw-8000.use2.devtunnels.ms/api/municipio/departamento/${departamentoCode - 1}`)
             .then(response => response.json())
             .then(data => {
                 const municipiosDelDepartamento = data.municipios;
@@ -31,8 +31,8 @@ function RegistroHotel() {
         nombre_hotel: '',
         correoElectronico: '',
         contacto: '',
-        contraseña: '',
-        confirmar_contraseña: '',
+        contrasena: '',
+        confirmar_contrasena: '',
         direccion: '',
         departamento: '',
         municipio: ''
@@ -84,10 +84,10 @@ function RegistroHotel() {
                             name="contacto"
                             value={formData.contacto}
                             onChange={handleChange} />
-                        <label htmlFor="contraseña" className="normal-case font-medium text-gray-500 text-base font-sans  mb-2">Contraseña</label>
-                        <input id="contraseña" value={formData.contraseña} onChange={handleChange} className="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="password" name="contraseña" placeholder="******************" />
-                        <label htmlFor="confirmar_contraseña" className="normal-case font-medium text-gray-500 text-base font-sans  mb-2">Confirme su contraseña</label>
-                        <input id="confirmar_contraseña" value={formData.confirmar_contraseña} onChange={handleChange} className="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="password" name="confirmar_contraseña" placeholder="******************" />
+                        <label htmlFor="contrasena" className="normal-case font-medium text-gray-500 text-base font-sans  mb-2">Contraseña</label>
+                        <input id="contrasena" value={formData.contrasena} onChange={handleChange} className="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="password" name="contrasena" placeholder="******************" />
+                        <label htmlFor="confirmar_contrasena" className="normal-case font-medium text-gray-500 text-base font-sans  mb-2">Confirme su contraseña</label>
+                        <input id="confirmar_contrasena" value={formData.confirmar_contrasena} onChange={handleChange} className="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="password" name="confirmar_contrasena" placeholder="******************" />
                         <label htmlFor="direccion" className="normal-case font-medium text-gray-500 text-base font-sans  mb-2">Dirección</label>
                         <input id="direccion" value={formData.direccion} onChange={handleChange} className="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="text" name="direccion"/>
                         <label htmlFor="departamento">Departamento</label>

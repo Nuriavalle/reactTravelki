@@ -16,11 +16,11 @@ function Cuadros() {
       </div></button>
       <button type="button" class="py-6 px-6 me-2 mb-2 text-lg pe-10 border border-4 text-end font-medium text-gray-900 focus:outline-none bg-white  border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"><div class="flex justify-center items-center">
         <img src={numero3} class=" w-16 h-16" />
-        <span class="px-2">METODOS DE PAGO</span>
+        <span class="px-2">RESERVA</span>
       </div></button>
       <button type="button" class="py-6 px-6 me-2 mb-2 text-lg pe-10 border border-4 text-end font-medium text-gray-900 focus:outline-none bg-white  border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"><div class="flex justify-center items-center">
         <img src={numero4} class=" w-16 h-16" />
-        <span class="px-2">DISPONIBILIDAD</span>
+        <span class="px-2">PAGO</span>
       </div></button>
     </div>
   );

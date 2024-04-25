@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import InfoHotel from '../components/infohotel';
+import Tabs from './Tabs';
 
 function Carrusel() {
   const [images, setImages] = useState([]);
@@ -34,7 +36,8 @@ function Carrusel() {
       <div className="container ml-12 w-32 h-12 text-lg py-1 border-4 text-center font-medium text-black focus:outline-none bg-white border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
         FOTOS
       </div>
-      <div className="container px-5 mx-auto flex flex-wrap items-center">
+      <div className="container px-5 mx-auto ml-8 flex flex-wrap items-center">
+
         <div className="lg:w-8/12 h-4/5 md:pr-16 lg:pr-0 pr-0">
           <Carousel selectedItem={currentIndex}>
             {images.map((image, index) => (
@@ -56,7 +59,20 @@ function Carrusel() {
               />
             ))}
           </div>
+
+          <div className='w-full'>
+        
+            <Tabs></Tabs>
+          </div>
         </div>
+
+        <div className="lg:w-4/12 h-4/5 md:pr-16 lg:pr-0 pr-0">
+        <InfoHotel></InfoHotel>
+        </div>
+
+
+
+
       </div>
     </section>
   );

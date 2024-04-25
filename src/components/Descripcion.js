@@ -1,26 +1,18 @@
+import logoHoliday from "../images/Holiday_Inn_Logo.svg.png"
+
 function Descripcion() {
   return (
-    <div>
-      <section class="text-gray-600 body-font">
-        <div class="container px-5 py-4 mx-auto flex flex-wrap">
-          <div class="flex flex-wrap -m-4">
-            <div class="p-4 lg:w-3/5 md:w-1/2 md:w-full">
-              <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
-                <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-8 h-8" viewBox="0 0 24 24">
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                  </svg>
-                </div>
-                <div class="flex-grow">
-                  <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Shooting Stars</h2>
-                  <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section class="text-gray-600 body-font">
+      <div class="container px-16 py-10 mx-auto bg-[#ECEFF4] flex flex-wrap">
+        <div class="w-1/3">
+          <img src={logoHoliday} class="h-32 w-34"></img>
         </div>
-      </section>
-    </div>
+        <div class="w-1/2">
+          <p class="text-xl font-sans font-medium pb-2 text-[#0D3B66]"> DESCRIPCION DEL HOTEL</p>
+          <p class="font-sans text-[#0D3B66]">"Ya sea que visite por negocios o placer, el Hotel Holiday Inn® San Salvador es su opción ideal, con amenidades de alta calidad, excelente servicio y una incomparable ubicación en la ciudad."</p>
+        </div>
+      </div>
+    </section>
   );
 };
 export default Descripcion

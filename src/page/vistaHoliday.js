@@ -8,11 +8,11 @@ import infoHotel from '../components/infohotel';
 function VistaHoliday() {
     return (
         <div class="pt-4">
-<Header2></Header2>
-<infoHotel></infoHotel>
-<Cuadros></Cuadros>
-<Carrusel></Carrusel>
-<Tabs></Tabs> 
+            <Header2></Header2>
+          
+            <Cuadros></Cuadros>
+            <Carrusel></Carrusel>
+          
         </div>
     )
 }

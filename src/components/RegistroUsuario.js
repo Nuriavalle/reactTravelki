@@ -1,4 +1,3 @@
-import InputMask from 'react-input-mask';
 
 function RegistroUsuario() {
     return (
@@ -22,15 +21,6 @@ function RegistroUsuario() {
                         </label>
                         <input id="correo_electronico" class="flex w-full pr-30 rounded-md mb-1 border border-amber-700 px-4 py-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             type="text" />
-                        <label className="normal-case font-medium text-gray-500 text-base font-sans mb-2" htmlFor="dui">
-                            Documento de identidad
-                        </label>
-                        <InputMask
-                            id="dui"
-                            mask="99999999-9"
-                            className="flex w-full pr-30 rounded-md border mb-1 border-amber-700 px-4 py-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                            type="text"
-                            name="dui" />
                         <label class="normal-case font-medium text-gray-500 text-base font-sans  mb-2" for="grid-first-name">
                             Fecha de nacimiento
                         </label>
@@ -43,11 +33,11 @@ function RegistroUsuario() {
                         <label class="normal-case font-medium text-gray-500 text-base font-sans  mb-2" for="grid-first-name">
                             Contraseña
                         </label>
-                        <input id="contraseña" class="flex w-full pr-30 rounded-md border mb-1 border-amber-700 px-4 py-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="password" placeholder="******************" />
+                        <input id="contrasena" class="flex w-full pr-30 rounded-md border mb-1 border-amber-700 px-4 py-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" name="contrasena" type="password" placeholder="******************" />
                         <label class="normal-case font-medium text-gray-500 text-base font-sans  mb-2" for="grid-first-name">
                             Confirme su contraseña
                         </label>
-                        <input id="confirme_contraseña" class="flex w-full pr-30 rounded-md border mb-3 border-amber-700 px-4 py-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="password" placeholder="******************" />
+                        <input id="confirmar_contrasena" class="flex w-full pr-30 rounded-md border mb-3 border-amber-700 px-4 py-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" name="confirmar_contrasena" type="password" placeholder="******************" />
                         <div class="text-center">
                             <input id="link-checkbox" type="checkbox" value="" class="text-blue-600 bg-gray-500 border border-amber-700 rounded focus:ring-blue-500 dark:bg-gray-700" name="link-checkbox" />
                             <label for="link-checkbox" class="ms-2 text-sm font-medium text-gray-500">He leido y acepto los <span class="text-sky-800 dark:text-sky-800 hover:underline">terminos y condiciones </span>del sitio.</label>
