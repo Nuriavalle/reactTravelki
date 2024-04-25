@@ -1,4 +1,5 @@
 import Hotel1 from "../assets/imagenes/hoteles/hotel 1.jpg";
+import { Link } from 'react-router-dom'
 import Ubicacion from "../assets/imagenes/hoteles/ubicacion.png";
 import Cama from "../assets/imagenes/hoteles/cama.png";
 import RatingExcelente from "./excelente";
@@ -34,9 +35,11 @@ function HotelCard() {
               <p>Las Tunas, Sonsonate.</p>
             </div>
             <div class="mt-4">
-              <button class="bg-[#0D3B66] text-white w-[190px] p-4 px-8 py-1 hover:bg-[#1D588F] rounded-lg">
-                Reservar
-              </button>
+              <Link to="/vistaHoliday">
+                <button className="bg-[#0D3B66] text-white w-[190px] p-4 px-8 py-1 hover:bg-[#1D588F] rounded-lg">
+                  Reservar
+                </button>
+              </Link>
             </div>
           </div>
         </div>

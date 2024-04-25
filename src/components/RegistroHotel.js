@@ -23,6 +23,10 @@ function RegistroHotel() {
             .then(data => {
                 const municipiosDelDepartamento = data.municipios;
                 setMunicipios(municipiosDelDepartamento);
+                setFormData({
+                    ...formData,
+                    departamento: departamentoCode
+                });
             })
             .catch(error => console.error('Error fetching municipios:', error));
     };
@@ -35,35 +39,35 @@ function RegistroHotel() {
         confirmar_contraseña: '',
         direccion: '',
         departamento: '',
-        municipio: ''
-      });
+        municipio: '' 
+    });
 
-      const handleChange = (e) => {
+    const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
-          ...formData,
-          [name]: value
+            ...formData,
+            [name]: value
         });
-      };
+    };
 
-      const handleSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData); 
+        console.log(formData);
         resetForm();
-      };
+    };
 
-      const resetForm = () => {
+    const resetForm = () => {
         setFormData({
-          nombre_hotel: '',
-          correoElectronico: '',
-          contacto: '',
-          contraseña: '',
-          confirmar_contraseña: '',
-          direccion: '',
-          departamento: '',
-          municipio: ''
+            nombre_hotel: '',
+            correoElectronico: '',
+            contacto: '',
+            contraseña: '',
+            confirmar_contraseña: '',
+            direccion: '',
+            departamento: '',
+            municipio: ''
         });
-      };
+    };
 
     return (
         <div>
@@ -96,6 +100,7 @@ function RegistroHotel() {
                             value={selectedDepartamento}
                             onChange={handleDepartamentoChange}
                             className="flex w-full pr-30 rounded-md border border-amber-700 mb-2 py-1 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            name="departamento"
                         >
                             <option value="">Selecciona un departamento</option>
                             {departamentos.map(departamento => (
@@ -108,8 +113,15 @@ function RegistroHotel() {
                         <select
                             id="municipio"
                             value={selectedMunicipio}
-                            onChange={event => setSelectedMunicipio(event.target.value)}
+                            onChange={(event) => {
+                                setSelectedMunicipio(event.target.value);
+                                setFormData({
+                                    ...formData,
+                                    municipio: event.target.value
+                                });
+                            }}
                             className="flex w-full pr-30 rounded-md border mb-4 border-amber-700 mb-2 py-1 px-4 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            name="municipio"
                         >
                             <option value="">Selecciona un municipio</option>
                             {municipios.map(municipio => (

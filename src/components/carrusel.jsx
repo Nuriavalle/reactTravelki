@@ -1,33 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import fachada from '../images/fachada.png';
+import living from '../images/living.jpg';
+import habitacionImage from '../images/habiatacionking.jpg';
+import comedorImage from '../images/comedor.jpg';
+import piscina from '../images/piscina.jpg';
 
 function Carrusel() {
-  const [images, setImages] = useState([]);
-  const [thumbnails, setThumbnails] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const response = await fetch(
-          'https://api.unsplash.com/photos/random?count=10&client_id=Nppj_gPu-CNwOuCBbQWUd3rfNwLzKanXVABzF9wxuMg'
-        );
-        if (response.ok) {
-          const data = await response.json();
-          setImages(data);
-          const thumbnailUrls = data.map((image) => image.urls.thumb);
-          setThumbnails(thumbnailUrls);
-        } else {
-          console.error('Error fetching images:', response.statusText);
-        }
-      } catch (error) {
-        console.error('Error fetching images:', error);
-      }
-    };
+  const images = [
+    { id: 1, src: fachada },
+    { id: 2, src: comedorImage },
+    { id: 3, src: piscina },
+    { id: 4, src: habitacionImage },
+    { id: 5, src: living },
+  ];
 
-    fetchImages();
-  }, []);
+  const numImages = images.length;
+  const thumbnailWidth = 100 / numImages; 
 
   return (
     <section className="text-gray-600 body-font">
@@ -38,20 +30,21 @@ function Carrusel() {
         <div className="lg:w-8/12 h-4/5 md:pr-16 lg:pr-0 pr-0">
           <Carousel selectedItem={currentIndex}>
             {images.map((image, index) => (
-              <div key={index} style={{ width: '100%', height: '400px' }}>
+              <div key={index} style={{ width: '100%', height: '500px' }}>
                 <div className="h-128">
-                  <img src={image.urls.regular} alt={`Image ${index}`} className="h-full" />
+                  <img src={image.src} alt={`Image ${index}`} className="h-full" />
                 </div>
               </div>
             ))}
           </Carousel>
-          <div className="flex justify-center mt-4">
-            {thumbnails.map((thumbnail, index) => (
+          <div className="flex justify-center mt-4 h-32"> 
+            {images.map((image, index) => (
               <img
                 key={index}
-                src={thumbnail}
+                src={image.src}
                 alt={`Thumbnail ${index}`}
-                className="w-16 h-16 object-cover cursor-pointer mr-2"
+                className="object-cover cursor-pointer mr-2"
+                style={{ width: `${thumbnailWidth}%`, height: '100%' }} 
                 onClick={() => setCurrentIndex(index)}
               />
             ))}
