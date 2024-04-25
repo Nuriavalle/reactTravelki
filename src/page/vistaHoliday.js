@@ -4,6 +4,7 @@ import Cuadros from '../components/cuadros';
 import Carrusel from '../components/carrusel';
 import Tabs from '../components/Tabs';
 import infoHotel from '../components/infohotel';
+import Opciones from '../components/opciones';
 
 function VistaHoliday() {
     return (
@@ -13,6 +14,7 @@ function VistaHoliday() {
 <Cuadros></Cuadros>
 <Carrusel></Carrusel>
 <Tabs></Tabs> 
+<Opciones></Opciones>
         </div>
     )
 }
